@@ -1,0 +1,41 @@
+behaviors:
+  Spider:
+    trainer_type: ppo
+
+    hyperparameters:
+      batch_size: 1024        # ↓ smaller = more stable updates
+      buffer_size: 10240      # ↓ smoother learning
+      learning_rate: 1.0e-4   # ↓ less jittery policy
+      beta: 1.0e-3            # ↓ less randomness
+      num_epoch: 3
+      learning_rate_schedule: linear
+      beta_schedule: linear
+      epsilon_schedule: linear
+
+    network_settings:
+      # 2 hidden layers, 128 units each - good for locomotion tasks
+      num_layers: 2
+      hidden_units: 128
+      # Normalise observations - important for locomotion (mixes distances, angles, velocities)
+      normalize: true
+
+    reward_signals:
+      extrinsic:
+        gamma: 0.99          # Discount - how much future rewards matter
+        strength: 1.0
+
+      # Curiosity bonus - rewards the spider for exploring novel states
+      # Helps early training when the spider hasn't learned anything useful yet
+    # Stop training after 10 million steps (adjust up if still improving)
+    max_steps: 10000000
+
+    # How often to log to TensorBoard
+    time_horizon: 128
+    summary_freq: 10000
+
+    # Keep a checkpoint every 500k steps so you can roll back
+    checkpoint_interval: 500000
+
+    # Run up to 8 spiders simultaneously for faster training
+    # (duplicate your spider prefab in the scene, they all share one brain)
+    threaded: true

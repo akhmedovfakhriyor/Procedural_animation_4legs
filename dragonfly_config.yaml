@@ -1,0 +1,42 @@
+behaviors:
+  Dragonfly:
+    trainer_type: ppo
+
+    hyperparameters:
+      batch_size: 2048
+      buffer_size: 20480
+      learning_rate: 3.0e-4
+      beta: 3.0e-3
+      epsilon: 0.2
+      num_epoch: 3
+      learning_rate_schedule: linear
+      beta_schedule: linear
+      epsilon_schedule: linear
+
+    network_settings:
+      num_layers: 2
+      hidden_units: 128
+      normalize: true    # critical — obs mix distances, speeds, directions
+
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+
+      curiosity:
+        gamma: 0.99
+        strength: 0.02
+        learning_rate: 3.0e-4
+        network_settings:
+          hidden_units: 64
+
+    max_steps: 10000000
+
+    # FIX: was 128 — far too short for a flying task.
+    # 2000 gives the dragonfly enough steps to turn, fly, and reach food
+    # before a policy update. Without this the reward signal is pure noise.
+    time_horizon: 2000
+
+    summary_freq: 10000
+    checkpoint_interval: 500000
+    threaded: true

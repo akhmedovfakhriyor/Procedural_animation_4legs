@@ -1,0 +1,47 @@
+{
+    "Dragonfly": {
+        "checkpoints": [
+            {
+                "steps": 206087,
+                "file_path": "results\\dragonfly_run05\\Dragonfly\\Dragonfly-206087.onnx",
+                "reward": 49.63899048169454,
+                "creation_time": 1779016338.757326,
+                "auxillary_file_paths": [
+                    "results\\dragonfly_run05\\Dragonfly\\Dragonfly-206087.pt"
+                ]
+            },
+            {
+                "steps": 228068,
+                "file_path": "results\\dragonfly_run05\\Dragonfly\\Dragonfly-228068.onnx",
+                "reward": 81.29886845179966,
+                "creation_time": 1779016575.8159792,
+                "auxillary_file_paths": [
+                    "results\\dragonfly_run05\\Dragonfly\\Dragonfly-228068.pt"
+                ]
+            },
+            {
+                "steps": 235494,
+                "file_path": "results\\dragonfly_run05\\Dragonfly\\Dragonfly-235494.onnx",
+                "reward": 82.05170681476594,
+                "creation_time": 1779016830.3736064,
+                "auxillary_file_paths": [
+                    "results\\dragonfly_run05\\Dragonfly\\Dragonfly-235494.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 235494,
+            "file_path": "results\\dragonfly_run05\\Dragonfly.onnx",
+            "reward": 82.05170681476594,
+            "creation_time": 1779016830.3736064,
+            "auxillary_file_paths": [
+                "results\\dragonfly_run05\\Dragonfly\\Dragonfly-235494.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

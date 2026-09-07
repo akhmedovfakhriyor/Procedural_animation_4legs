@@ -1,0 +1,4 @@
+repository "Diploma 2.0/Diploma 2.0@18966896790373@cloud"
+  path "/"
+    br "/main"
+    co "/main"

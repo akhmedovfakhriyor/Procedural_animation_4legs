@@ -1,0 +1,65 @@
+{
+    "Spider": {
+        "checkpoints": [
+            {
+                "steps": 1325478,
+                "file_path": "results\\SpiderLike_01\\Spider\\Spider-1325478.onnx",
+                "reward": 7513.822211430718,
+                "creation_time": 1778928824.7227473,
+                "auxillary_file_paths": [
+                    "results\\SpiderLike_01\\Spider\\Spider-1325478.pt"
+                ]
+            },
+            {
+                "steps": 1343481,
+                "file_path": "results\\SpiderLike_01\\Spider\\Spider-1343481.onnx",
+                "reward": 55.365837067365646,
+                "creation_time": 1779016946.1058733,
+                "auxillary_file_paths": [
+                    "results\\SpiderLike_01\\Spider\\Spider-1343481.pt"
+                ]
+            },
+            {
+                "steps": 1352188,
+                "file_path": "results\\SpiderLike_01\\Spider\\Spider-1352188.onnx",
+                "reward": 38.698990154266355,
+                "creation_time": 1779017373.545393,
+                "auxillary_file_paths": [
+                    "results\\SpiderLike_01\\Spider\\Spider-1352188.pt"
+                ]
+            },
+            {
+                "steps": 1353090,
+                "file_path": "results\\SpiderLike_01\\Spider\\Spider-1353090.onnx",
+                "reward": 45.40261697769165,
+                "creation_time": 1779017513.4102519,
+                "auxillary_file_paths": [
+                    "results\\SpiderLike_01\\Spider\\Spider-1353090.pt"
+                ]
+            },
+            {
+                "steps": 1353921,
+                "file_path": "results\\SpiderLike_01\\Spider\\Spider-1353921.onnx",
+                "reward": 47.3097505569458,
+                "creation_time": 1779017675.1954916,
+                "auxillary_file_paths": [
+                    "results\\SpiderLike_01\\Spider\\Spider-1353921.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1353921,
+            "file_path": "results\\SpiderLike_01\\Spider.onnx",
+            "reward": 47.3097505569458,
+            "creation_time": 1779017675.1954916,
+            "auxillary_file_paths": [
+                "results\\SpiderLike_01\\Spider\\Spider-1353921.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}
